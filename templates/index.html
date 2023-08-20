@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FWI Prediction</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <style>
+    
+    </style>
+</head>
+<body>
+    <div class="main">
+        <h1 class="header">Fire Weather Index (FWI) Index</h1>
+        <form action="{{ url_for('predict_datapoint')}}" method="post">
+            <label for="temp">Temperature in Celsius degrees:</label>
+            <input type="text" id="temp" name="temp" placeholder="Temperature" required><br>
+            <label for="rh">Relative Humidity(RH) in %:</label>
+            <input type="text" id="rh" name="rh" placeholder="Relative Humidity" required><br>
+            <label for="ws">Wind speed(ws) in km/h:</label>
+            <input type="text" id="ws" name="ws" placeholder="Wind speed" required><br>
+            <label for="rain">Rain, total day in mm:</label>
+            <input type="text" id="rain" name="rain" placeholder="Rain" required><br>
+            <label for="FFMC">Fine Fuel Moisture Code (FFMC):</label>
+            <input type="text" id="FFMC" name="FFMC" placeholder="FFMC" required><br>
+            <label for="DMC">Duff Moisture Code (DMC):</label>
+            <input type="text" id="DMC" name="DMC" placeholder="DMC" required><br>
+            <label for="ISI">Initial Spread Index (ISI):</label>
+            <input type="text" id="ISI" name="ISI" placeholder="ISI" required><br>
+            <label for="classes">Classes(0-Not Fire,1-Fire):</label>
+            <input type="text" id="classes" name="classes" placeholder="0-Not Fire,1-Fire" required><br>
+            <label for="reg">Region(0/1):</label>
+            <input type="text" id="reg" name="reg" placeholder="Region" required><br>
+
+            <button type="submit">Predict</button>
+        </form>
+
+        <h2>The FWI prediction is {{result}}</h2>
+    </div>
+    
+</body>
+</html>

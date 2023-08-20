@@ -1,0 +1,32 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+.main {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+  flex-direction: column;
+  align-items: center;
+}
+.header {
+  color: rgb(13, 235, 50);
+}
+input{
+   border-radius: 20px;
+   padding: 10px 0 10px 10px;
+   margin: 2px 10px;
+   box-shadow: rgba(50, 50, 93, 0.25) 0px 14px 15px -6px inset, rgba(0, 0, 0, 0.3) -4px 13px 25px -13px inset
+}
+form{
+    margin: 20px;
+}
+button{
+    padding: 5px 100px;
+    margin: 10px 0 0 0;
+    margin-left: 25%;
+    border-radius: 30px;
+}
+label{
+    font-size: 22px;
+}
