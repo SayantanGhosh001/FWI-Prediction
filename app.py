@@ -27,7 +27,7 @@ def predict_datapoint():
         new_data_scaled= scaler_model.transform([[Temperature,RH,Ws,Rain,FFMC,DMC,ISI,Classes,Region]])
         result=ridge_model.predict(new_data_scaled)
 
-        return render_template('index.html',result=result[0])
+        return render_template('pred.html',result=result[0])
 
     else:
         return render_template('index.html')
