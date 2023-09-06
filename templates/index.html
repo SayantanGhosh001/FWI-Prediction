@@ -1,17 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>FWI Prediction</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
     <style>
-    
+
     </style>
 </head>
+
 <body>
     <div class="main">
-        <h1 class="header">Fire Weather Index (FWI) Index</h1>
+        <h1 class="header">Fire Weather Index (FWI)
+            Index</h1>
         <form action="{{ url_for('predict_datapoint')}}" method="post">
             <label for="temp">Temperature in Celsius degrees:</label>
             <input type="text" id="temp" name="temp" placeholder="Temperature" required><br>
@@ -36,6 +39,7 @@
         </form>
 
     </div>
-    
+
 </body>
+
 </html>
